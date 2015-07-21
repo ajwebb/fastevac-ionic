@@ -1,0 +1,61 @@
+<ion-view view-title="Personnel">
+    <ion-nav-buttons side="right">
+      <button class="button nav_button" ng-click="goHome()">
+        <i class="icon ion-navicon-round"></i>
+      </button>
+    </ion-nav-buttons>
+    <ion-content>
+    <div class="list" id="personnel_select_div">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Group
+        </div>
+        <select>
+          <option selected>All</option>
+          <option>Office</option>
+          <option>Warehouse</option>
+          <option>Clean Room</option>
+        </select>
+      </label>
+    </div>
+    <ion-list>
+      <div>
+        <ion-item class="item-stable" ng-click="toggleNeedAssistanceGroup()" ng-class="{active: isNeedAssistanceGroupShown()}">
+          <i class="icon" ng-class="isNeedAssistanceGroupShown() ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            In Need of Assistance
+        </ion-item>
+        <ion-item class="item-accordion item-icon-right" ng-repeat="person in needAssistancePersonnel" ng-show="isNeedAssistanceGroupShown()" href="#/tab/personnel/{{person.id}}">
+          {{person.name}}
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+      </div>
+
+      <div>
+        <ion-item class="item-stable" ng-click="toggleNotCheckedInGroup()" ng-class="{active: isNotCheckedInGroupShown()}">
+          <i class="icon" ng-class="isNotCheckedInGroupShown() ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Not Checked In
+        </ion-item>
+        <ion-item class="item-accordion item-icon-right" ng-repeat="person in notCheckedInPersonnel" ng-show="isNotCheckedInGroupShown()" href="#/tab/personnel/{{person.id}}">
+          {{person.name}}
+          <i class="icon ion-chevron-right icon-accessory"></i>
+
+        </ion-item>
+      </div>
+
+      <div>
+        <ion-item class="item-stable" ng-click="toggleCheckedInGroup()" ng-class="{active: isCheckedInGroupShown()}">
+          <i class="icon" ng-class="isCheckedInGroupShown() ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Checked In
+        </ion-item>
+        <ion-item class="item-accordion item-icon-right" ng-repeat="person in checkedInPersonnel" ng-show="isCheckedInGroupShown()" href="#/tab/personnel/{{person.id}}">
+          {{person.name}}
+          <i class="icon ion-chevron-right icon-accessory"></i>
+
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

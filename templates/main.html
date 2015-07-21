@@ -1,0 +1,42 @@
+<ion-view view-title="FastEvac">
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        Select the groups of employees you wish to be alerted to evacuate
+      </div>
+    </div>
+    <div>
+      <ul class="list">
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           All Students
+        </li>
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Office
+        </li>
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Warehouse
+        </li>
+        <li class="item item-checkbox">
+           <label class="checkbox">
+             <input type="checkbox">
+           </label>
+           Clean Room
+        </li>
+      </ul>
+    </div>
+    <div class="padding">
+      <button class="button button-block button-assertive" ng-click="triggerAlert()">
+        Trigger Alert
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

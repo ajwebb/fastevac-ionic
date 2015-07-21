@@ -1,0 +1,32 @@
+<ion-view view-title="Message Group">
+  <ion-nav-buttons side="right">
+      <button class="button nav_button" ng-click="goHome()">
+        <i class="icon ion-navicon-round"></i>
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+  <div class="list" id="personnel_select_div">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Group
+        </div>
+        <select>
+          <option selected>All</option>
+          <option>Office</option>
+          <option>Warehouse</option>
+          <option>Clean Room</option>
+        </select>
+      </label>
+    </div>
+  	<div class="list">
+	  <label class="item item-input">
+	    <textarea id="message_txtarea" placeholder="Enter Message..."></textarea>
+	  </label>
+	</div>
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="sendMessage()">
+        Send
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+
+#message_txtarea {
+	height: 200px;
+}
+
+#personnel_select_div {
+	margin: 0;
+}
+
+.bar-header {
+	background-color: orange!important;
+	border-color: transparent;
+}
+
+.title {
+	color: white!important;
+}
+
+.person_face_img {
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+}
+
+.nav_button {
+	background-color: transparent!important;
+	border-color: transparent!important;
+}
